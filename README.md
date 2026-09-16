@@ -24,3 +24,15 @@ Create a production build with:
 Start the production API and serve the built frontend with:
 
 `cd frontend && npm start`
+
+## Backend Container
+
+Build the FastAPI image from the repository root:
+
+`docker build -f backend/Dockerfile -t village-portfolio-api .`
+
+Run it locally:
+
+`docker run --rm -p 8000:8000 village-portfolio-api`
+
+The container uses the hosting platform's `PORT` environment variable when provided, defaulting to `8000`.
