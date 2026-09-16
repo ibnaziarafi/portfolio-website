@@ -12,6 +12,7 @@ import { PropertyModal } from './components/PropertyModal';
 import { HouseModal } from './components/HouseModal';
 import { JournalModal } from './components/JournalModal';
 import { GuestbookModal } from './components/GuestbookModal';
+import { apiUrl } from './utils/api';
 
 export default function App() {
   const [profile, setProfile] = useState<VillageProfile>(initialVillageProfile);
@@ -23,7 +24,7 @@ export default function App() {
 
   // Fetch initial profile and properties from the FastAPI backend
   useEffect(() => {
-    fetch('/api/profile')
+    fetch(apiUrl('/api/profile'))
       .then(res => res.json())
       .then(data => {
         if (data.name) setProfile(data);
@@ -32,7 +33,7 @@ export default function App() {
         // Fallback to initialVillageProfile
       });
 
-    fetch('/api/properties')
+    fetch(apiUrl('/api/properties'))
       .then(res => res.json())
       .then(data => {
         if (data.properties && Array.isArray(data.properties)) {

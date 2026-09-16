@@ -25,6 +25,14 @@ Start the production API and serve the built frontend with:
 
 `cd frontend && npm start`
 
+## Deployment Configuration
+
+For the deployed frontend, set this Vercel environment variable:
+
+`VITE_API_URL=https://portfolio-website-backend-beige-pi.vercel.app`
+
+Redeploy the frontend after changing environment variables. Local development can leave `VITE_API_URL` unset because Vite proxies `/api` requests to the local FastAPI server.
+
 ## Backend Container
 
 Build the FastAPI image from the repository root:

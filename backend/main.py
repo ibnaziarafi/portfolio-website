@@ -28,7 +28,13 @@ class GuestbookEntry(GuestbookSubmission):
 app = FastAPI(title="Village Portfolio API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://rafistacks.dev",
+        "https://www.rafistacks.dev",
+    ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

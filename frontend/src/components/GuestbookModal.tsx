@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Sparkles, Send, MessageSquare, Check, User } from 'lucide-react';
+import { apiUrl } from '../utils/api';
 
 interface GuestbookEntry {
   id: string;
@@ -23,7 +24,7 @@ export const GuestbookModal: React.FC<GuestbookModalProps> = ({ isOpen, onClose,
 
   useEffect(() => {
     if (isOpen) {
-      fetch('/api/guestbook')
+      fetch(apiUrl('/api/guestbook'))
         .then(res => res.json())
         .then(data => {
           if (data.entries) setEntries(data.entries);
@@ -58,7 +59,7 @@ export const GuestbookModal: React.FC<GuestbookModalProps> = ({ isOpen, onClose,
     setSuccessMsg('');
 
     try {
-      const res = await fetch('/api/guestbook', {
+      const res = await fetch(apiUrl('/api/guestbook'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: name.trim(), message: message.trim() }),
