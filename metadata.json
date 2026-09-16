@@ -1,0 +1,6 @@
+{
+  "name": "The Land of Rafi - Village Portfolio",
+  "description": "Welcome, brave souls, to the land of Rafi. Step in. Explore. Discover what’s been built.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
