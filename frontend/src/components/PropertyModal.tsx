@@ -58,7 +58,6 @@ const getProjectPackageJson = (prop: VillageProperty): string => {
     "dev": "vite dev"
   },
   "dependencies": {
-    "@google/genai": "^0.1.2",
     "chromadb": "^0.4.22",
     "fastapi": "^0.110.0",
     "react": "^18.3.1"
