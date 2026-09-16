@@ -21,7 +21,7 @@ export default function App() {
   const [isVisitorLogOpen, setIsVisitorLogOpen] = useState<boolean>(false);
   const [timeOfDay, setTimeOfDay] = useState<'day' | 'sunset' | 'night'>('day');
 
-  // Fetch initial profile & properties from Express backend
+  // Fetch initial profile and properties from the FastAPI backend
   useEffect(() => {
     fetch('/api/profile')
       .then(res => res.json())
