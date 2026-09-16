@@ -9,7 +9,10 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from data import initial_village_profile, village_properties
+try:
+    from .data import initial_village_profile, village_properties
+except ImportError:
+    from data import initial_village_profile, village_properties
 
 
 class GuestbookSubmission(BaseModel):
@@ -101,7 +104,7 @@ def add_guestbook_entry(submission: GuestbookSubmission) -> dict[str, Any]:
     return {"success": True, "entry": entry}
 
 
-dist_path = Path(__file__).parent / "dist"
+dist_path = Path(__file__).parent.parent / "frontend" / "dist"
 if dist_path.exists():
     app.mount("/assets", StaticFiles(directory=dist_path / "assets"), name="assets")
 
