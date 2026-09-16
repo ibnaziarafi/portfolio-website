@@ -111,8 +111,8 @@ export const villageProperties: VillageProperty[] = [
       { label: 'Capabilities', value: 'ATAR, TCE & Courses' },
       { label: 'Knowledge Base', value: 'Grounded RAG' }
     ],
-    projectUrl: 'https://routeplanner.rafistacks.dev/',
-    githubUrl: 'https://github.com',
+    projectUrl: 'https://olinda-ai.onrender.com/',
+    githubUrl: 'https://github.com/ibnaziarafi/olinda-project',
     demoType: 'web'
   },
   {
@@ -144,7 +144,7 @@ export const villageProperties: VillageProperty[] = [
       { label: 'Live Deployment', value: 'routeplanner.rafistacks.dev' }
     ],
     projectUrl: 'https://routeplanner.rafistacks.dev/',
-    githubUrl: 'https://github.com',
+    githubUrl: 'https://github.com/ibnaziarafi/Route-planner',
     demoType: 'web'
   },
   {

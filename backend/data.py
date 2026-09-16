@@ -64,7 +64,7 @@ village_properties: list[dict[str, Any]] = [
         ["Gemini / LLM", "RAG Architecture", "Vector Search", "Python", "TypeScript", "Tailwind CSS"],
         ["Specialized academic RAG knowledge base indexed on official Hobart College course guidebooks", "Authoritative advice on ATAR calculation criteria, scaled score projections, and TCE credit requirements", "Multi-turn conversational context with zero hallucination via grounded citation sources", "Intuitive student-friendly chat interface with pre-built prompt chips for swift academic guidance"],
         [{"label": "Institution", "value": "Hobart College"}, {"label": "Capabilities", "value": "ATAR, TCE & Courses"}, {"label": "Knowledge Base", "value": "Grounded RAG"}],
-        "https://routeplanner.rafistacks.dev/", "web",
+        "https://olinda-ai.onrender.com/", "web",
     ),
     property_item(
         "merchants-logistics-route-planner", "Merchant's Logistics & Route Planner", "Pickup & Drop-off Problem (PDP) • Dijkstra, Min-Heap & A* Optimization", "greenhouse", "fullstack",
