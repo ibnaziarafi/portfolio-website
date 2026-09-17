@@ -7,8 +7,8 @@ export const initialVillageProfile: VillageProfile = {
   bio: 'Passionate about building resilient, delightfully fast web applications, distributed systems, and intuitive user experiences. Stroll through the village plots below to inspect my projects, codebases, and architectural decisions.',
   location: 'Village Town Square • Connected Worldwide',
   contactEmail: 'izrafi.au@gmail.com',
-  github: 'https://github.com',
-  linkedin: 'https://linkedin.com',
+  github: 'https://github.com/ibnaziarafi/',
+  linkedin: 'https://www.linkedin.com/in/ibna-zia-rafi-4861962ba/',
   stats: {
     totalProjects: 6,
     activeDeployments: 5,
