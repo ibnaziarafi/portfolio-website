@@ -175,8 +175,8 @@ export const villageProperties: VillageProperty[] = [
       { label: 'State Engine', value: 'Deterministic 4x4' },
       { label: 'Future AI', value: 'ML Move Learner' }
     ],
-    projectUrl: 'https://github.com',
-    githubUrl: 'https://github.com',
+    projectUrl: 'https://2048.rafistacks.dev/',
+    githubUrl: 'https://github.com/ibnaziarafi/2048-game',
     demoType: 'web'
   },
   {

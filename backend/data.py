@@ -84,7 +84,7 @@ village_properties: list[dict[str, Any]] = [
         ["TypeScript", "React", "Motion", "Matrix State Machine", "Machine Learning (Planned)", "Local Storage"],
         ["Fluid sliding tile animations with touch swipe gestures and responsive keyboard controls", "Deterministic 4x4 matrix game engine with score calculation, tile merging, and game-over detection", "Machine Learning roadmap: Reinforcement learning & move-prediction model trained on human play styles", "Decoupled game engine state facilitating automated AI evaluation and optimal move recommendations"],
         [{"label": "Game Engine", "value": "60 FPS Smooth"}, {"label": "State Engine", "value": "Deterministic 4x4"}, {"label": "Future AI", "value": "ML Move Learner"}],
-        "https://github.com", "web",
+        "https://2048.rafistacks.dev/", "web",
     ),
     property_item(
         "celestial-cottage", "Celestial Cottage", "Reserved Innovation Plot • Future Project Coming Soon", "cottage", "ai",
