@@ -8,8 +8,8 @@ initial_village_profile: dict[str, Any] = {
     "bio": "Passionate about building resilient, delightfully fast web applications, distributed systems, and intuitive user experiences. Stroll through the village plots below to inspect my projects, codebases, and architectural decisions.",
     "location": "Village Town Square • Connected Worldwide",
     "contactEmail": "izrafi.au@gmail.com",
-    "github": "https://github.com",
-    "linkedin": "https://linkedin.com",
+    "github": "https://github.com/ibnaziarafi/",
+    "linkedin": "https://www.linkedin.com/in/ibna-zia-rafi-4861962ba/",
     "stats": {"totalProjects": 6, "activeDeployments": 5, "techStackCount": 16, "villagePlots": 6},
 }
 
@@ -21,6 +21,7 @@ def property_item(
     short_desc: str, full_desc: str, tech_stack: list[str], highlights: list[str],
     metrics: list[dict[str, str]], project_url: str, demo_type: str,
     headquarters: bool = False,
+    github_url: str = "https://github.com",
 ) -> dict[str, Any]:
     return {
         "id": id, "name": name, "subtitle": subtitle,
@@ -31,7 +32,7 @@ def property_item(
         "roofColor": roof_color, "wallColor": wall_color, "accentColor": accent_color,
         "status": status, "shortDesc": short_desc, "fullDesc": full_desc,
         "techStack": tech_stack, "highlights": highlights, "metrics": metrics,
-        "projectUrl": project_url, "githubUrl": "https://github.com", "demoType": demo_type,
+        "projectUrl": project_url, "githubUrl": github_url, "demoType": demo_type,
     }
 
 
@@ -75,6 +76,7 @@ village_properties: list[dict[str, Any]] = [
         ["Solves the vehicle Pickup & Drop-off Problem (PDP) with vehicle capacity and stop precedence constraints", "Implemented and evaluated 3 shortest routing algorithms: classic Dijkstra, Dijkstra with Min-Heap, and A* Search", "Benchmarked across 3 solution methods: algorithmic from scratch, Google OR-Tools suite, and PyVRP", "Live interactive application with real-time route pathfinding deployed at routeplanner.rafistacks.dev"],
         [{"label": "Routing Algorithms", "value": "Dijkstra, Heap, A*"}, {"label": "Solution Methods", "value": "Scratch, OR-Tools, PyVRP"}, {"label": "Live Deployment", "value": "routeplanner.rafistacks.dev"}],
         "https://routeplanner.rafistacks.dev/", "web",
+        github_url="https://github.com/ibnaziarafi/Route-planner",
     ),
     property_item(
         "2048-watch-cottage", "The 2048 Watch Cottage", "Sliding Tile Puzzle • Machine Learning Move-Prediction Roadmap", "workshop", "frontend",
@@ -85,6 +87,7 @@ village_properties: list[dict[str, Any]] = [
         ["Fluid sliding tile animations with touch swipe gestures and responsive keyboard controls", "Deterministic 4x4 matrix game engine with score calculation, tile merging, and game-over detection", "Machine Learning roadmap: Reinforcement learning & move-prediction model trained on human play styles", "Decoupled game engine state facilitating automated AI evaluation and optimal move recommendations"],
         [{"label": "Game Engine", "value": "60 FPS Smooth"}, {"label": "State Engine", "value": "Deterministic 4x4"}, {"label": "Future AI", "value": "ML Move Learner"}],
         "https://2048.rafistacks.dev/", "web",
+        github_url="https://github.com/ibnaziarafi/2048-game",
     ),
     property_item(
         "celestial-cottage", "Celestial Cottage", "Reserved Innovation Plot • Future Project Coming Soon", "cottage", "ai",
