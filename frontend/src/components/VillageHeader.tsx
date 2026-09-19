@@ -46,11 +46,12 @@ export const VillageHeader: React.FC<VillageHeaderProps> = ({
   };
 
   return (
-    <header id="village-game-header" className="w-full max-w-5xl mx-auto pt-10 sm:pt-14 pb-8 sm:pb-10 px-4 sm:px-6">
+    <>
+      <header id="village-game-header" className="w-full max-w-5xl mx-auto pt-6 sm:pt-14 pb-6 sm:pb-10 px-3 sm:px-6">
       {/* Top subtle controls bar */}
-      <div className="flex items-center justify-between pb-6">
+      <div className="flex items-center justify-end sm:justify-between pb-4 sm:pb-6">
         {/* Game HUD tag */}
-        <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-stone-900/90 text-amber-300 font-mono text-xs border border-amber-500/30 shadow-xs">
+        <div className="hidden sm:inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-stone-900/90 text-amber-300 font-mono text-xs border border-amber-500/30 shadow-xs">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span>WORLD_SERVER: RAFI_VILLAGE // v1.2</span>
         </div>
@@ -61,7 +62,7 @@ export const VillageHeader: React.FC<VillageHeaderProps> = ({
             <button
               id="visitor-log-header-btn"
               onClick={onOpenVisitorLog}
-              className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-mono rounded bg-amber-950/80 hover:bg-amber-900 text-amber-200 border border-amber-600/40 shadow-xs transition cursor-pointer"
+              className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 text-xs font-mono rounded bg-amber-950/80 hover:bg-amber-900 text-amber-200 border border-amber-600/40 shadow-xs transition cursor-pointer"
               title="Open the Village Visitor Log & Sign Ledger"
             >
               <BookOpen className="w-3.5 h-3.5 text-amber-400" />
@@ -95,12 +96,12 @@ export const VillageHeader: React.FC<VillageHeaderProps> = ({
       </div>
 
       {/* Main Header Content - Cinematic Fantasy Title & Separated Motto */}
-      <div className="text-center sm:text-left flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+      <div className="text-center sm:text-left flex flex-col sm:flex-row sm:items-end justify-between gap-5 sm:gap-6">
         <div className="space-y-3">
           {/* Fantasy Book/Movie Title: "Welcome, brave souls, to the land of Rafi." */}
           <h1 
             id="village-title-heading" 
-            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider text-stone-900 font-['Cinzel',serif] leading-tight"
+            className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-wider text-stone-900 font-['Cinzel',serif] leading-tight break-words"
           >
             Welcome, brave souls, to the land of Rafi.
           </h1>
@@ -124,13 +125,13 @@ export const VillageHeader: React.FC<VillageHeaderProps> = ({
         </div>
 
         {/* Action Links: Just GitHub, LinkedIn, and Get in Touch */}
-        <div id="village-hero-links" className="flex items-center justify-center sm:justify-start gap-2.5 shrink-0 pt-2 sm:pt-0">
+        <div id="village-hero-links" className="flex flex-wrap items-center justify-center sm:justify-start gap-2 pt-1 sm:pt-0">
           <a
             id="hero-github-link"
             href={githubUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-100 text-xs font-semibold shadow-xs transition"
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-100 text-xs font-semibold shadow-xs transition"
           >
             <Github className="w-4 h-4" />
             <span>GitHub</span>
@@ -141,7 +142,7 @@ export const VillageHeader: React.FC<VillageHeaderProps> = ({
             href={linkedinUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#0077b5] hover:bg-[#006097] text-white text-xs font-semibold shadow-xs transition"
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#0077b5] hover:bg-[#006097] text-white text-xs font-semibold shadow-xs transition"
           >
             <Linkedin className="w-4 h-4" />
             <span>LinkedIn</span>
@@ -150,13 +151,26 @@ export const VillageHeader: React.FC<VillageHeaderProps> = ({
           <a
             id="hero-contact-link"
             href={`mailto:${contactEmail}?subject=Hello%20from%20Rafi's%20Village`}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-amber-800/40 bg-amber-100/70 hover:bg-amber-200/80 text-amber-950 text-xs font-semibold shadow-xs transition"
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-amber-800/40 bg-amber-100/70 hover:bg-amber-200/80 text-amber-950 text-xs font-semibold shadow-xs transition"
           >
             <Mail className="w-4 h-4 text-amber-800" />
             <span>Get in Touch</span>
           </a>
         </div>
       </div>
-    </header>
+      </header>
+
+      {onOpenVisitorLog && (
+        <button
+          id="mobile-visitor-log-btn"
+          onClick={onOpenVisitorLog}
+          className="fixed right-3 bottom-4 z-40 inline-flex sm:hidden items-center gap-1.5 rounded-full border border-amber-500/50 bg-stone-900/95 px-2.5 py-1.5 text-[11px] font-mono font-semibold text-amber-200 shadow-lg backdrop-blur-xs transition hover:bg-stone-800"
+          title="Open the Village Visitor Log"
+        >
+          <BookOpen className="h-3.5 w-3.5 text-amber-400" />
+          <span>Visitor Log{visitorCount !== undefined ? ` (${visitorCount})` : ''}</span>
+        </button>
+      )}
+    </>
   );
 };
