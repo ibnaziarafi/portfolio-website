@@ -199,30 +199,7 @@ export const JournalModal: React.FC<JournalModalProps> = ({
             </div>
           </section>
 
-          {/* Section 4: Verified Production Metrics */}
-          <section className="space-y-3 pt-2">
-            <h2 className="text-base font-bold font-mono text-stone-900 uppercase tracking-wide flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-amber-500" />
-              <span>Production Benchmarks & Quantitative Results</span>
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {journal.metrics.map((m, idx) => (
-                <div key={idx} className="p-3.5 rounded-lg bg-white border border-stone-200 text-center shadow-2xs space-y-1">
-                  <span className="block text-[11px] font-mono text-stone-500 uppercase tracking-wider">
-                    {m.label}
-                  </span>
-                  <span className="block text-xl font-bold font-mono text-stone-900">
-                    {m.value}
-                  </span>
-                  <span className="block text-[10px] text-stone-500">
-                    {m.detail}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Section 5: Tech Stack Badges */}
+          {/* Section 4: Tech Stack Badges */}
           <section className="space-y-2 pt-2 pb-4">
             <h2 className="text-xs font-mono font-bold text-stone-500 uppercase tracking-wider">
               Technology Stack Used

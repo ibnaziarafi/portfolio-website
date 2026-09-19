@@ -106,9 +106,9 @@ export const HouseModal: React.FC<HouseModalProps> = ({
                   </p>
                 </div>
                 <div className="p-3 rounded-lg bg-white/70 border border-amber-900/10 shadow-2xs">
-                  <span className="block text-xs font-mono text-amber-800 font-bold mb-1">PHILOSOPHY</span>
-                  <p className="text-xs text-stone-700 italic">
-                    “Actions speak louder than words.” Every building on this map is a real, working system.
+                  <span className="block text-xs font-mono text-amber-800 font-bold mb-1">ACHIEVEMENT</span>
+                  <p className="text-xs text-stone-700">
+                    Merit in ICT, National Award Bangladesh 2022, powered by BASIS, for a data-driven plant care app.
                   </p>
                 </div>
               </div>
