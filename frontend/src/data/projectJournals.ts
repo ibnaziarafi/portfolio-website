@@ -66,20 +66,20 @@ export const projectJournals: Record<string, ProjectJournal> = {
 
   'college-guild-advisor': {
     id: 'college-guild-advisor',
-    title: 'College Guild Advisor: Grounded Academic & Course Guide',
-    subtitle: 'Architecting a conversational assistant for Hobart College students, parents, and academic counselors.',
+    title: 'Olinda AI - Hobart College AI Chatbot',
+    subtitle: 'An AI-powered assistant for reliable information about courses, enrolment, pathways, and college questions.',
     readTime: '5 min read',
     date: 'Live Project',
-    category: 'Conversational AI & Education',
-    synopsis: 'College Guild Advisor serves as a 24/7 intelligent advisor for Hobart College. It delivers instant, grounded answers regarding subject selection handbooks, Tasmanian Certificate of Education (TCE) credit pathways, and Australian Tertiary Admission Rank (ATAR) calculations.',
-    problem: 'Navigating senior secondary education requirements, course prerequisite chains, and complex ATAR scoring rules can overwhelm students and parents, placing high administrative loads on academic guidance counselors during enrollment periods.',
+    category: 'RAG & Conversational AI',
+    synopsis: 'Olinda AI helps Hobart College students, parents, and prospective students find reliable answers using a curated knowledge base and Retrieval-Augmented Generation (RAG).',
+    problem: 'College-related questions require reliable, current information about courses, enrolment, pathways, and other college processes rather than answers based only on an LLM internal knowledge.',
     architecture: {
-      title: 'Grounded Retrieval-Augmented Generation (RAG) Architecture',
+      title: 'Retrieval-Augmented Generation with Vector Search',
       points: [
-        'Curriculum Vector Index: High-fidelity embeddings of Hobart College course handbooks, subject guides, and academic policies.',
-        'ATAR & TCE Rule Engine: Deterministic rule verification ensuring calculations adhere strictly to Tasmanian curriculum standards.',
-        'Context-Aware Chat Orchestrator: Maintains multi-turn context across subject inquiries and graduation requirements.',
-        'Guardrailed Generation: Enforces strict source attribution with citations to official Hobart College documentation.'
+        'Curated Knowledge Base: College information is prepared for retrieval rather than relying only on model memory.',
+        'Semantic Search: PostgreSQL with pgvector retrieves relevant context using vector embeddings.',
+        'FastAPI Workflow: Python and FastAPI manage retrieval, prompt construction, and response generation.',
+        'Fallback Architecture: Groq and Gemini models provide service continuity when the primary model encounters an issue.'
       ]
     },
     challenges: [
@@ -93,9 +93,9 @@ export const projectJournals: Record<string, ProjectJournal> = {
       }
     ],
     keyLearnings: [
-      'In academic advising, factual reliability and source citation are paramount over conversational flair.',
-      'Grounded RAG combined with deterministic rule validation produces trusted student-facing assistants.',
-      'Quick-action prompt chips accelerate student discovery for critical deadlines and course pathways.'
+      'Grounded RAG reduces hallucinations by giving the model relevant, curated context.',
+      'Vector search and prompt engineering are central to producing useful college-related answers.',
+      'Fallback LLM architecture improves service availability for student-facing applications.'
     ],
     metrics: [
       { label: 'Institution', value: 'Hobart College', detail: 'Customized for college guides & rules' },
@@ -106,20 +106,20 @@ export const projectJournals: Record<string, ProjectJournal> = {
 
   '2048-watch-cottage': {
     id: '2048-watch-cottage',
-    title: '2048 Game Engine & Machine Learning Move-Learning Roadmap',
-    subtitle: 'Building a fluid 60 FPS matrix puzzle game with an AI roadmap that learns strategic play from human moves.',
+    title: '2048 Game',
+    subtitle: 'A full-stack implementation demonstrating practical Data Structures & Algorithms and future AI integration.',
     readTime: '5 min read',
     date: 'Active Project',
-    category: 'Game Engine & Machine Learning',
-    synopsis: 'A high-performance, responsive implementation of the classic 2048 sliding-tile puzzle game. Engineered with a deterministic board engine and an ambitious Machine Learning pipeline designed to observe player decision trajectories, evaluate move quality, and learn strategic play patterns from human games.',
-    problem: 'Traditional game AI often relies on brute-force expectimax search trees that lack intuition. Creating an AI that understands human play style and can teach players optimal strategies requires learning from real move sequences.',
+    category: 'DSA & AI/ML Integration',
+    synopsis: 'A full-stack 2048 puzzle game built with a Python and FastAPI engine and a React, TypeScript, and Vite frontend.',
+    problem: 'The project demonstrates how matrix traversal, transposition, and reusable tile-merging algorithms can power all four game directions without duplicated movement logic.',
     architecture: {
-      title: 'Deterministic Matrix Engine & ML Training Pipeline',
+      title: '4x4 Matrix Game Engine & AI Roadmap',
       points: [
-        'Zero-Latency Matrix Engine: 4x4 bitboard representation enabling microsecond tile merge evaluations and collision checks.',
-        'Hardware-Accelerated Motion: Fluid spring animations and swipe gesture recognition with 60 FPS visual smoothness.',
-        'Move Telemetry Logger: Captures anonymized tile states, move directions, score deltas, and board entropy per turn.',
-        'Machine Learning Roadmap: Reinforcement learning & imitation learning model trained on player games to suggest optimal moves.'
+        'Board Representation: A 4x4 2D list represents the game board.',
+        'Matrix Algorithms: Traversal, transposition, movement, and tile merging handle every direction.',
+        'Reusable Processing: One row-processing algorithm reduces duplicated logic across four moves.',
+        'Future AI Integration: Gameplay data will support models that identify strategies and recommend effective moves.'
       ]
     },
     challenges: [
@@ -133,9 +133,9 @@ export const projectJournals: Record<string, ProjectJournal> = {
       }
     ],
     keyLearnings: [
-      'Decoupling game state evaluation from UI rendering is essential for both buttery framerates and future AI autoplay.',
-      'Imitation learning from skilled players produces far more natural and educational advice than raw minimax search.',
-      'Responsive touch handling requires immediate optimistic feedback with zero debounce lag.'
+      'A reusable row algorithm keeps movement behavior consistent across all directions.',
+      'Fixed board dimensions make each move practically O(1), even though the general algorithm is O(N^2).',
+      'Gameplay telemetry can provide a foundation for future machine learning and move recommendation features.'
     ],
     metrics: [
       { label: 'Engine Framerate', value: '60 FPS', detail: 'Zero frame drops during rapid swipes' },
@@ -146,20 +146,20 @@ export const projectJournals: Record<string, ProjectJournal> = {
 
   'merchants-logistics-route-planner': {
     id: 'merchants-logistics-route-planner',
-    title: "Merchant's Logistics & Route Planner: Solving the Pickup & Drop-off Problem (PDP)",
-    subtitle: 'Benchmarking Dijkstra, Min-Heap Dijkstra, and A* Shortest Path Routing across Scratch, Google OR-Tools, and PyVRP.',
+    title: 'Route Planner - Delivery Route Optimisation System',
+    subtitle: 'Optimising pickup and delivery routes with Hobart road data, graph algorithms, and multiple solver approaches.',
     readTime: '6 min read',
     date: 'Live Production',
-    category: 'Operations Research & Optimization',
-    synopsis: "Merchant's Logistics & Route Planner is a comprehensive vehicle routing optimization platform deployed live at routeplanner.rafistacks.dev. It tackles the mathematically rigorous Pickup and Drop-off Problem (PDP) with capacity, pairing, and precedence constraints, comparing 3 fundamental shortest path algorithms across 3 modern solution engines.",
-    problem: 'The Pickup and Drop-off Problem (PDP) is an NP-hard combinatorial challenge where items must be collected from origins and delivered to specific destinations while respecting vehicle capacities, pairing rules, and minimizing total transit distance.',
+    category: 'Route Optimisation & Full Stack',
+    synopsis: 'Route Planner is a full-stack delivery route optimisation platform using real-world Hobart road and location data to solve pickup and delivery scenarios.',
+    problem: 'Delivery planning must respect driver capacity, pickup locations, drop-off relationships, route distance, and other constraints while producing efficient routes.',
     architecture: {
-      title: 'Tri-Algorithm & Tri-Solver Optimization Framework',
+      title: 'Graph Routing & Multi-Solver Framework',
       points: [
-        '3 Shortest Path Algorithms: Classic Dijkstra, Priority Queue Min-Heap Dijkstra (O((V+E) log V)), and heuristic A* Search.',
-        '3 Solution Methods: Custom algorithmic solver written from scratch, Google OR-Tools constraint programming, and PyVRP (Vehicle Routing Problem library).',
-        'Precedence & Capacity Enforcer: Guarantees pickup locations are visited strictly before drop-offs without exceeding vehicle payload limits.',
-        'Live Interactive Frontend: React + Leaflet map interface rendering route polylines, waypoint order, and optimization metrics.'
+        'Graph Algorithms: Weighted graphs, Dijkstra shortest paths, and A* pathfinding operate on Hobart map data.',
+        'Pickup and Delivery Problem: Routes account for driver capacity and pickup/drop-off relationships.',
+        'Three Solvers: A custom solver, OR-Tools, and PyVRP solve the same delivery scenarios.',
+        'Deployment Foundation: Docker, Vercel, and CI/CD support the full-stack application.'
       ]
     },
     challenges: [
@@ -173,9 +173,9 @@ export const projectJournals: Record<string, ProjectJournal> = {
       }
     ],
     keyLearnings: [
-      'Min-Heap priority queues provide dramatic speedups over naive Dijkstra on sparse road network graphs.',
-      'Google OR-Tools excels at handling complex multi-vehicle constraints, while PyVRP demonstrates incredible speed on pure VRP benchmarks.',
-      'Writing solvers from scratch builds deep intuition for why specific heuristic relaxations succeed.'
+      'Comparing multiple solvers creates a measurable basis for future performance benchmarking.',
+      'Route quality must be evaluated alongside speed, cost, constraints, and scalability.',
+      'Combining DSA, optimisation, deployment, and AI/ML creates a strong foundation for an experimental logistics platform.'
     ],
     metrics: [
       { label: 'Routing Algorithms', value: 'Dijkstra, Heap, A*', detail: '3 shortest path formulations' },

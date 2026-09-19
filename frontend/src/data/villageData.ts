@@ -2,9 +2,9 @@ import { VillageProfile, VillageProperty } from '../types.js';
 
 export const initialVillageProfile: VillageProfile = {
   name: 'Izrafi',
-  title: 'Full-Stack Software Engineer & Digital Craftsman',
+  title: 'AI-focused Full-Stack Developer',
   quote: "Actions speak louder than words, let's jump into my village.",
-  bio: 'Passionate about building resilient, delightfully fast web applications, distributed systems, and intuitive user experiences. Stroll through the village plots below to inspect my projects, codebases, and architectural decisions.',
+  bio: 'Computer Science student majoring in Artificial Intelligence, building full-stack applications with Python, FastAPI, React, PostgreSQL, NoSQL, Docker, and CI/CD. Interested in AI/ML integration, DSA, system design, and scalable software engineering.',
   location: 'Village Town Square • Connected Worldwide',
   contactEmail: 'izrafi.au@gmail.com',
   github: 'https://github.com/ibnaziarafi/',
@@ -85,8 +85,8 @@ export const villageProperties: VillageProperty[] = [
   },
   {
     id: 'college-guild-advisor',
-    name: 'College Guild Advisor',
-    subtitle: 'Smart AI Academic Advisor • Courses Guide, ATAR & TCE Pathways',
+    name: 'Olinda AI - Hobart College AI Chatbot',
+    subtitle: 'Hobart College AI Chatbot • Courses, Enrolment & Pathways',
     buildingStyle: 'bakery',
     category: 'ai',
     plotLabel: 'Plot #03',
@@ -97,14 +97,14 @@ export const villageProperties: VillageProperty[] = [
     wallColor: '#fef3c7', // Warm timber & stone
     accentColor: '#a855f7',
     status: 'Live Project',
-    shortDesc: 'Two-story timber guild tavern. Smart conversational AI chatbot answering student and parent queries on Hobart College course guides, ATAR, and TCE pathways.',
-    fullDesc: 'College Guild Advisor is a dedicated intelligent conversational assistant built for Hobart College students, parents, and academic counselors. It delivers instant, grounded answers regarding senior secondary course selection guides, Tasmanian Certificate of Education (TCE) subject credits, and Australian Tertiary Admission Rank (ATAR) calculation rules.',
-    techStack: ['Gemini / LLM', 'RAG Architecture', 'Vector Search', 'Python', 'TypeScript', 'Tailwind CSS'],
+    shortDesc: 'Olinda AI, a conversational assistant for Hobart College students, parents, and prospective students.',
+    fullDesc: 'Olinda AI is an AI-powered chatbot built for Hobart College to help students, parents, and prospective students find reliable information about courses, enrolment, pathways, and other college-related questions. It uses Retrieval-Augmented Generation (RAG) with PostgreSQL and pgvector to retrieve relevant knowledge before generating a response. The Python and FastAPI backend integrates Groq and Gemini models with a fallback mechanism for service availability.',
+    techStack: ['RAG', 'Vector Embeddings', 'PostgreSQL + pgvector', 'Python', 'FastAPI', 'Groq', 'Gemini'],
     highlights: [
-      'Specialized academic RAG knowledge base indexed on official Hobart College course guidebooks',
-      'Authoritative advice on ATAR calculation criteria, scaled score projections, and TCE credit requirements',
-      'Multi-turn conversational context with zero hallucination via grounded citation sources',
-      'Intuitive student-friendly chat interface with pre-built prompt chips for swift academic guidance'
+      'Retrieval-Augmented Generation grounded in a curated Hobart College knowledge base',
+      'Semantic search using vector embeddings with PostgreSQL and pgvector',
+      'Groq and Gemini LLM integration with fallback architecture',
+      'Prompt engineering and context management focused on reliable, grounded responses'
     ],
     metrics: [
       { label: 'Institution', value: 'Hobart College' },
@@ -117,8 +117,8 @@ export const villageProperties: VillageProperty[] = [
   },
   {
     id: 'merchants-logistics-route-planner',
-    name: "Merchant's Logistics & Route Planner",
-    subtitle: 'Pickup & Drop-off Problem (PDP) • Dijkstra, Min-Heap & A* Optimization',
+    name: 'Route Planner - Delivery Route Optimisation System',
+    subtitle: 'Delivery Route Optimisation • Graph Algorithms & PDP Solvers',
     buildingStyle: 'greenhouse',
     category: 'fullstack',
     plotLabel: 'Plot #04',
@@ -129,14 +129,14 @@ export const villageProperties: VillageProperty[] = [
     wallColor: '#e5e7eb', // Shop stone
     accentColor: '#8b5cf6', // Striped purple awning
     status: 'Live Production',
-    shortDesc: "Two-story merchant shop. Interactive logistics & route planner solving the Pickup & Drop-Off Problem using Dijkstra, Min-Heap, A*, Google OR-Tools, and PyVRP.",
-    fullDesc: 'A high-performance vehicle routing optimization and route planning platform deployed live at routeplanner.rafistacks.dev. It solves the complex Pickup and Drop-off Problem (PDP) with multi-stop capacity and precedence constraints using 3 shortest routing algorithms (Dijkstra, Dijkstra with Min-Heap, and A* Search) benchmarked across 3 distinct solution methods: custom implementation from scratch, Google OR-Tools constraint suite, and PyVRP.',
-    techStack: ['Python', 'Dijkstra & Min-Heap', 'A* Search', 'Google OR-Tools', 'PyVRP', 'FastAPI', 'React', 'Leaflet'],
+    shortDesc: 'A delivery route optimisation platform using Hobart road and location data, graph algorithms, and multiple PDP solvers.',
+    fullDesc: 'Route Planner is a full-stack delivery route optimisation platform built to solve real-world pickup and delivery problems using Hobart road and location data. The Python and FastAPI backend combines graph algorithms, shortest-path calculations, and Pickup and Delivery Problem (PDP) solving while considering driver capacity, pickup locations, and drop-off relationships. It supports custom, OR-Tools, and PyVRP solver approaches for future performance benchmarking.',
+    techStack: ['Python', 'FastAPI', 'Graph Algorithms', 'Dijkstra', 'A*', 'OR-Tools', 'PyVRP', 'Docker', 'CI/CD'],
     highlights: [
-      'Solves the vehicle Pickup & Drop-off Problem (PDP) with vehicle capacity and stop precedence constraints',
-      'Implemented and evaluated 3 shortest routing algorithms: classic Dijkstra, Dijkstra with Min-Heap, and A* Search',
-      'Benchmarked across 3 solution methods: algorithmic from scratch, Google OR-Tools suite, and PyVRP',
-      'Live interactive application with real-time route pathfinding deployed at routeplanner.rafistacks.dev'
+      'Weighted graph data structures with Dijkstra and A* pathfinding',
+      'Pickup and Delivery Problem solving with driver capacity constraints',
+      'Custom solver, OR-Tools, and PyVRP approaches for the same delivery scenarios',
+      'Benchmarking foundation for speed, cost, solution quality, constraint satisfaction, and scalability'
     ],
     metrics: [
       { label: 'Routing Algorithms', value: 'Dijkstra, Heap, A*' },
@@ -149,8 +149,8 @@ export const villageProperties: VillageProperty[] = [
   },
   {
     id: '2048-watch-cottage',
-    name: 'The 2048 Watch Cottage',
-    subtitle: 'Sliding Tile Puzzle • Machine Learning Move-Prediction Roadmap',
+    name: '2048 Game',
+    subtitle: 'Full-Stack Puzzle Game • DSA & Future AI Integration',
     buildingStyle: 'workshop',
     category: 'frontend',
     plotLabel: 'Plot #05',
@@ -161,14 +161,14 @@ export const villageProperties: VillageProperty[] = [
     wallColor: '#78350f', // Timber wood cottage
     accentColor: '#f97316',
     status: 'Built Game & ML Roadmap',
-    shortDesc: 'Timber cottage by the western wall and archery targets. Built 2048 puzzle game with future ML model integration that learns from human player moves.',
-    fullDesc: 'A slick, responsive implementation of the classic 2048 sliding-tile puzzle game with smooth grid motion and state persistence. Features an ambitious machine learning integration roadmap: an ML model designed to observe player decision sequences, evaluate optimal tile merges, and continuously learn strategic gameplay from human moves in real time.',
-    techStack: ['TypeScript', 'React', 'Motion', 'Matrix State Machine', 'Machine Learning (Planned)', 'Local Storage'],
+    shortDesc: 'A full-stack 2048 puzzle game demonstrating practical Data Structures & Algorithms concepts and AI/ML integration planning.',
+    fullDesc: '2048 is a full-stack implementation of the classic puzzle game. The Python and FastAPI game engine uses a 4x4 2D list to represent the board, with matrix traversal, transposition, and tile-merging algorithms. A reusable row-processing algorithm powers all four directions. The React, TypeScript, and Vite frontend provides an interactive interface connected to the FastAPI backend. Each move processes the board in O(N^2) time and O(N^2) space, which is practically O(1) for a fixed board size.',
+    techStack: ['Python', 'FastAPI', 'React', 'TypeScript', 'Vite', 'DSA', 'REST API'],
     highlights: [
-      'Fluid sliding tile animations with touch swipe gestures and responsive keyboard controls',
-      'Deterministic 4x4 matrix game engine with score calculation, tile merging, and game-over detection',
-      'Machine Learning roadmap: Reinforcement learning & move-prediction model trained on human play styles',
-      'Decoupled game engine state facilitating automated AI evaluation and optimal move recommendations'
+      '2D array representation with matrix traversal and manipulation',
+      'Matrix transposition and tile movement and merging algorithms',
+      'Reusable row-processing algorithm for all four movement directions',
+      'Future ML pipeline for player strategies, movement patterns, and effective move recommendations'
     ],
     metrics: [
       { label: 'Game Engine', value: '60 FPS Smooth' },

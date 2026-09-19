@@ -91,18 +91,18 @@ export const HouseModal: React.FC<HouseModalProps> = ({
 
             <div className="space-y-3 text-sm text-stone-800 leading-relaxed font-sans">
               <p className="text-base sm:text-lg font-medium text-stone-950 font-serif">
-                Hello! I’m <span className="font-bold text-amber-950">Rafi</span>, a full-stack engineer and digital craftsman.
+                Hello! I’m <span className="font-bold text-amber-950">Rafi</span>, an AI-focused full-stack developer.
               </p>
 
               <p>
-                I build resilient, high-performance web platforms and developer tooling with sub-second responsiveness. Rather than an ordinary flat resume, I crafted this interactive village so you can explore my projects, codebases, and architectural decisions as a living landscape.
+                I am a Computer Science student majoring in Artificial Intelligence, building full-stack applications with Python, FastAPI, React, PostgreSQL, NoSQL, Docker, and CI/CD. I am interested in AI/ML integration, DSA, system design, and scalable software engineering.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <div className="p-3 rounded-lg bg-white/70 border border-amber-900/10 shadow-2xs">
                   <span className="block text-xs font-mono text-amber-800 font-bold mb-1">CORE CRAFT</span>
                   <p className="text-xs text-stone-700">
-                    Full-Stack TypeScript, Node.js, Express, React, WebSockets, PostgreSQL, Docker & System Design.
+                    Python, FastAPI, React, PostgreSQL, NoSQL, Docker, CI/CD, AI/ML integration, DSA & system design.
                   </p>
                 </div>
                 <div className="p-3 rounded-lg bg-white/70 border border-amber-900/10 shadow-2xs">
